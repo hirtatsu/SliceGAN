@@ -37,21 +37,13 @@ python run_slicegan 1
 python run_slicegan 0
 ```
 
-### Development
+### 開発
 
-If you are interested in trying new architectures, see the networks.py file
+- 新しいアーキテクチャを試すことに興味がある方は、networks.pyファイルをご覧ください。
+- 学習パラメータやアルゴリズムを調整する場合は、train.pyを参照してください。
+- 新しい前処理方法（例えば、異なるトレーニングデータ型用）を追加するには、preproccessing.pyを参照してください。
 
-To adjust the training parameters or algorithm, see train.py
-
-To add a new preprocessing method e.g for a different training datatype, see preproccessing.py.
-
-### Results
+### 結果例
 
 ![](images/SliceGAN_results.png)
-
-### Versions
-
-v1.1 release: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4399114.svg)](https://doi.org/10.5281/zenodo.4399114)
-
-v1.0 release: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319988.svg)](https://doi.org/10.5281/zenodo.4319988)
 
