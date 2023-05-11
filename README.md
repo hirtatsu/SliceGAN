@@ -6,7 +6,29 @@
 
 ### 準備
 - Python3環境が構築していることが前提です。
-- run_sliceganを開き、必要に応じて情報を編集します。特にプロジェクト名SliceGANは、等方性微細構造の単一の2Dトレーニング画像、または異方性微細構造の直角に撮影された3つの2D画像を必要とします。画像は、カラー、グレースケール、n相のいずれでも構いません。
+- run_sliceganを開き、必要に応じて情報を編集します。
+  - プロジェクト名：
+  ```
+  Project_name = 'XXXXXXXXX'
+  ```
+  - 教師データのタイプ (colour, grayscale, three-phase or two-phase. n-phase materials must be segmented)
+  ```
+  image_type = 'nphase'
+  ```
+  - 教師データの相の数
+  ```
+  img_channels = 3
+  ```
+  - 教師データのデータタイプ(for colour/grayscale images, must be 'colour' / 'greyscale'. nphase can be, 'tif2D', 'png', 'jpg', tif3D, 'array')
+  ```
+  data_type = 'tif3D'
+  ```
+    - 教師データのディレクトリとファイル名：
+  ```
+  data_path = ['XXXXXXXXX/YYYYYY.tif']
+  ```
+- 
+SliceGANは、等方性微細構造の単一の2Dトレーニング画像、または異方性微細構造の直角に撮影された3つの2D画像を必要とします。画像は、カラー、グレースケール、n相のいずれでも構いません。
 
 To use SliceGAN open run_slicegan and edit information as requested. SliceGAN requires a single 2D training image of an isotropic microstructure, or three 2D images taken at perpendicular angles of an anisotropic microstructure. Images can be colour, grayscale or n-phase.
 
