@@ -5,7 +5,11 @@
 
 
 ### 準備
-- Python3環境が構築されていることが前提です。
+- Python3環境が構築されていること。
+- NVIDIA cuda toolkitとCUDA Deep Neural Network (cuDNN)がインストール済みであること。以下のコマンドで確認する。
+```
+nvidia-smi
+```
 - Githubからローカルにクローンを持ってくる
 ```
 git clone https://github.com/hirtatsu/SliceGAN.git
