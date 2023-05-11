@@ -6,9 +6,15 @@
 
 ### 準備
 - Python3環境が構築されていること。
-- NVIDIA cuda toolkitとCUDA Deep Neural Network (cuDNN)がインストール済みであること。以下のコマンドで確認する。
+- nvidia cuda toolkitとCUDA Deep Neural Network (cuDNN)がインストール済みであること。確認は以下。
 ```
 nvidia-smi
+nvcc -V
+
+python3
+>> import torch
+>> torch.cuda.is_available()
+TRUE
 ```
 - Githubからローカルにクローンを持ってくる
 ```
