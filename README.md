@@ -46,7 +46,7 @@ git clone https://github.com/hirtatsu/SliceGAN.git
 ```
 python run_slicegan 1
 ```
-- 例の.tifファイルを生成して保存するには
+- トレーニング後に画像を表示するには
 ```
 python run_slicegan 0
 ```
