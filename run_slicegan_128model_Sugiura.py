@@ -30,7 +30,7 @@ img_channels = 1
 # greyscale. nphase can be, 'tif2D', 'png', 'jpg', tif3D, 'array')
 data_type = 'grayscale'
 # Path to your data. One string for isotrpic, 3 for anisotropic
-data_path = ['Examples/SUS_XZ.png', 'Examples/SUS_XY.png', 'Examples/SUS_YZ90R.png']
+data_path = ['Examples_Sugiura/SUS_XZ.png', 'Examples_Sugiura/SUS_XY.png', 'Examples_Sugiura/SUS_YZ90R.png']
 
 ## Network Architectures
 # Training image size, no. channels and scale factor vs raw data
