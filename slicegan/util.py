@@ -5,6 +5,7 @@ from torch import autograd
 import numpy as np
 import matplotlib.pyplot as plt
 import tifffile
+from scipy.io import loadmat, savemat # <- from HJ-harry's SliceGAN-AdaIN
 import sys
 ## Training Utils
 
@@ -203,10 +204,12 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
             gb = gb[:,:-1]
         if periodic[2]:
             gb = gb[:,:,:-1]
-    tif = np.int_(gb)
-    tifffile.imwrite(pth + '.tif', tif)
+    # tif = np.int_(gb)
+    # tifffile.imwrite(pth + '.tif', tif)
+    mat = np.int_(gb)           # <- from HJ-harry's SliceGAN-AdaIN
+    np.save(pth + '.npy', mat)  # <- from HJ-harry's SliceGAN-AdaIN
 
-    return tif, raw, netG
+    return mat, raw, netG
 
 
 
