@@ -196,7 +196,7 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
     with torch.no_grad():
         raw = netG(noise)
     print('Postprocessing')
-    gb = post_proc(raw,imtype)[0]
+    gb = post_proc(raw,imtype)
     if periodic:
         if periodic[0]:
             gb = gb[:-1]
