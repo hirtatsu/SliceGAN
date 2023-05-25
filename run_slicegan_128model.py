@@ -8,9 +8,9 @@ to generate a synthetic image using a trained generator.
 from slicegan import model, networks, util
 import argparse
 # Define project name
-Project_name = '128model'
+Project_name = '45Bi_2'
 # Specify project folder.
-Project_dir = 'Trained_Generators/SUS'
+Project_dir = 'Trained_Generators/SBZI'
 # Run with False to show an image during or after training
 parser = argparse.ArgumentParser()
 parser.add_argument('training', type=int)
@@ -30,7 +30,7 @@ img_channels = 1
 # greyscale. nphase can be, 'tif2D', 'png', 'jpg', tif3D, 'array')
 data_type = 'grayscale'
 # Path to your data. One string for isotrpic, 3 for anisotropic
-data_path = ['Examples/SUS_XZ.png', 'Examples/SUS_XY.png', 'Examples/SUS_YZ90R.png']
+data_path = ['Examples/45Bi_2.png']
 
 ## Network Architectures
 # Training image size, no. channels and scale factor vs raw data
