@@ -6,7 +6,7 @@
 
 さらに、K. Sugiuraらにより解像度が向上する改良版が示されている。
 [Sugiura K, Ogawa T, Adachi Y, Sun F, Suzuki A, Yamanaka A, Nakada N, Ishimoto T, Nakano T, Koizumi Y. Big-Volume SliceGAN for Improving a Synthetic 3D Microstructure Image of Additive-Manufactured TYPE 316L Steel. Journal of Imaging. 2023; 9(5):90. https://doi.org/10.3390/jimaging9050090](https://doi.org/10.3390/jimaging9050090)
-run_slicegan_128model.py
+- run_slicegan_128model.py
 
 
 
