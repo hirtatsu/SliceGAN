@@ -204,9 +204,13 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
             gb = gb[:,:-1]
         if periodic[2]:
             gb = gb[:,:,:-1]
-    # tif = np.int_(gb)
-    # tifffile.imwrite(pth + '.tif', tif)
-    mat = np.int_(gb)           # <- from HJ-harry's SliceGAN-AdaIN
+    tif = np.int_(gb)
+    mat = np.int_(gb)
+    if imtype == 'grayscale':
+        tif = tif.astype('uint8')
+        mat = tif.astype('uint8')
+
+    tifffile.imwrite(pth + '.tif', tif)
     np.save(pth + '.npy', mat)  # <- from HJ-harry's SliceGAN-AdaIN
 
     return mat, raw, netG

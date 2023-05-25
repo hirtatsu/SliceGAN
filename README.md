@@ -4,6 +4,12 @@
 [Kench, S., Cooper, S.J. Generating three-dimensional structures from a two-dimensional slice with generative adversarial network-based dimensionality expansion. Nat Mach Intell 3, 299–305 (2021).](https://www.nature.com/articles/s42256-021-00322-1)
 
 
+さらに、K. Sugiuraらにより解像度が向上する改良版が示されている。
+[Sugiura K, Ogawa T, Adachi Y, Sun F, Suzuki A, Yamanaka A, Nakada N, Ishimoto T, Nakano T, Koizumi Y. Big-Volume SliceGAN for Improving a Synthetic 3D Microstructure Image of Additive-Manufactured TYPE 316L Steel. Journal of Imaging. 2023; 9(5):90. https://doi.org/10.3390/jimaging9050090](https://doi.org/10.3390/jimaging9050090)
+- run_slicegan_128model.py
+
+
+
 ### 準備
 - Python3環境が構築されていること。
 - nvidia cuda toolkitとCUDA Deep Neural Network (cuDNN)がインストール済みであること。確認は以下。
@@ -57,9 +63,3 @@ python run_slicegan 0
 - 学習パラメータやアルゴリズムを調整する場合は、train.pyを確認する。
 - 新しい前処理方法（例えば、異なるトレーニングデータ型用）を追加する場合は、preproccessing.pyを確認する。
 
-### 改良版
-K. Sugiuraらによる改良版Pythonファイルと、それに用いる元画像は以下。
-[Sugiura K, Ogawa T, Adachi Y, Sun F, Suzuki A, Yamanaka A, Nakada N, Ishimoto T, Nakano T, Koizumi Y. Big-Volume SliceGAN for Improving a Synthetic 3D Microstructure Image of Additive-Manufactured TYPE 316L Steel. Journal of Imaging. 2023; 9(5):90. https://doi.org/10.3390/jimaging9050090](https://doi.org/10.3390/jimaging9050090)
-
-- Pythonファイル: run_slicegan_64model_Sugiura.py, run_slicegan_128model_Sugiura.py
-- 画像ファイル: ./Examples_Sugiura/　です
