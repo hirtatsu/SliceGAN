@@ -38,11 +38,11 @@ git clone https://github.com/hirtatsu/SliceGAN.git
   ```
   - 教師データの相の数
   ```
-  img_channels = 3
+  img_channels = 2
   ```
   - 教師データのデータタイプ(for colour/grayscale images, must be 'colour' / 'greyscale'. nphase can be, 'tif2D', 'png', 'jpg', tif3D, 'array')
   ```
-  data_type = 'tif3D'
+  data_type = 'tif2D'
   ```
     - 教師データのディレクトリとファイル名：
   ```
@@ -50,11 +50,11 @@ git clone https://github.com/hirtatsu/SliceGAN.git
   ```
 - 新しいジェネレーターをトレーニングするには
 ```
-python run_slicegan 1
+python run_slicegan_64 1
 ```
 - トレーニング後に画像を表示するには
 ```
-python run_slicegan 0
+python run_slicegan_64 0
 ```
 
 ### 開発
