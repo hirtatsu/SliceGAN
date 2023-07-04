@@ -50,11 +50,13 @@ git clone https://github.com/hirtatsu/SliceGAN.git
   ```
 - 新しいジェネレーターをトレーニングするには
 ```
-python run_slicegan_64 1
+python run_slicegan_64model 1 # 通常解像度
+python run_slicegan_128model 1 # 高解像度
 ```
-- トレーニング後に画像を表示するには
+- トレーニング後に三次元画像を作成するには
 ```
-python run_slicegan_64 0
+python run_slicegan_64model 0 # 通常解像度
+python run_slicegan_128model 0 # 高解像度
 ```
 
 ### 開発
