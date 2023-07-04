@@ -8,9 +8,9 @@ to generate a synthetic image using a trained generator.
 from slicegan import model, networks, util
 import argparse
 # Define project name
-Project_name = '45Bi'
+Project_name = '264h-2'
 # Specify project folder.
-Project_dir = 'Trained_Generators/SBZI'
+Project_dir = 'Trained_Generators/Ag'
 # Run with False to show an image during or after training
 parser = argparse.ArgumentParser()
 parser.add_argument('training', type=int)
@@ -23,14 +23,14 @@ Project_path = util.mkdr(Project_name, Project_dir, Training)
 ## Data Processing
 # Define image  type (colour, grayscale, three-phase or two-phase.
 # n-phase materials must be segmented)
-image_type = 'grayscale'
+image_type = 'n-phase'
 # img_channels should be number of phases for nphase, 3 for colour, or 1 for grayscale
-img_channels = 1
+img_channels = 2
 # define data type (for colour/grayscale images, must be 'colour' / '
 # greyscale. nphase can be, 'tif2D', 'png', 'jpg', tif3D, 'array')
-data_type = 'grayscale'
+data_type = 'tif2D'
 # Path to your data. One string for isotrpic, 3 for anisotropic
-data_path = ['Examples/45Bi.png']
+data_path = ['Examples/Ag_264h-2.tif']
 
 ## Network Architectures
 # Training image size, no. channels and scale factor vs raw data

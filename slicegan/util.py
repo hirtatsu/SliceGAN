@@ -5,7 +5,6 @@ from torch import autograd
 import numpy as np
 import matplotlib.pyplot as plt
 import tifffile
-from scipy.io import loadmat, savemat # <- from HJ-harry's SliceGAN-AdaIN
 import sys
 ## Training Utils
 
@@ -132,8 +131,7 @@ def test_plotter(img,slcs,imtype,pth):
     :param imtype: image type
     :param pth: where to save plot
     """
-    # img = post_proc(img,imtype)[0]
-    img = post_proc(img,imtype)    
+    img = post_proc(img,imtype)[0]
     fig, axs = plt.subplots(slcs, 3)
     if imtype == 'colour':
         for j in range(slcs):
@@ -196,7 +194,7 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
     with torch.no_grad():
         raw = netG(noise)
     print('Postprocessing')
-    gb = post_proc(raw,imtype)
+    gb = post_proc(raw,imtype)[0]
     if periodic:
         if periodic[0]:
             gb = gb[:-1]
@@ -205,15 +203,9 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
         if periodic[2]:
             gb = gb[:,:,:-1]
     tif = np.int_(gb)
-    mat = np.int_(gb)
-    if imtype == 'grayscale':
-        tif = tif.astype('uint8')
-        mat = tif.astype('uint8')
-
     tifffile.imwrite(pth + '.tif', tif)
-    np.save(pth + '.npy', mat)  # <- from HJ-harry's SliceGAN-AdaIN
 
-    return mat, raw, netG
+    return tif, raw, netG
 
 
 
