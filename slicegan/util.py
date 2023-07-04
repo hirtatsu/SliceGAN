@@ -203,6 +203,11 @@ def test_img(pth, imtype, netG, nz = 64, lf = 4, periodic=False):
         if periodic[2]:
             gb = gb[:,:,:-1]
     tif = np.int_(gb)
+    print('Generated image type is {}'.format(imtype))
+    if imtype != 'colour':          # <- modified
+        tif = tif.astype('uint8')   # <- modified
+    print('Generated image data type is {}'.format(tif.dtype))
+    print('Generated image data shape is {}'.format(tif.shape))
     tifffile.imwrite(pth + '.tif', tif)
 
     return tif, raw, netG
