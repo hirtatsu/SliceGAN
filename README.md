@@ -24,7 +24,7 @@ TRUE
 ```
 - Githubからローカルにクローンを持ってくる
 ```
-git clone https://github.com/hirtatsu/SliceGAN.git
+git clone https://github.com/hirtatsu/SliceGAN_mod.git
 ```
 - SliceGANは、等方性微細構造の単一の2Dトレーニング画像、または異方性微細構造の直角に撮影された3つの2D画像を必要とします。画像は、カラー、グレースケール、n相のいずれでも構いません。
 - run_sliceganを開き、必要に応じて情報を編集します。
