@@ -8,7 +8,7 @@ to generate a synthetic image using a trained generator.
 from slicegan import model, networks, util
 import argparse
 # Define project name
-Project_name = 'PorousAg'
+Project_name = 'PorousAg_128'
 # Specify project folder.
 Project_dir = 'Trained_Generators/test'
 # Run with False to show an image during or after training
