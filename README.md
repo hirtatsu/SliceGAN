@@ -9,6 +9,21 @@
 - run_slicegan_128model.py
 
 
+### 動作確認済み環境 1
+- WSL Ubuntu
+- RTX 6000 Ada Generation
+- NVIDIA Driver 8.1.964.0 on Windows
+- CUDA Toolkit 12.1
+- CuDNN 8.9.7.29
+- Pytorch 2.1.2+cu121
+### 動作確認済み環境 2
+- WSL Ubuntu
+- RTX 4090
+- NVIDIA Driver 8.1.964.0 on Windows
+- CUDA Toolkit 11.8
+- CuDNN 8.9.1.23
+- Pytorch 2.0.1+cu118
+ 
 
 ### 準備
 - Python3環境が構築されていること。
